@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satyam — Full-Stack Developer</title>
+  <meta name="description" content="Satyam is a full-stack developer crafting performant, beautiful web experiences — from database to pixel.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADER
+       ============================================================ -->
+  <div id="loader">
+    <div id="loader-inner">
+      <div id="loader-text">Loading the reel</div>
+      <div id="loader-bar-track"><div id="loader-bar"></div></div>
+      <div id="loader-count">00 / 89</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO — Scroll Animation
+       ============================================================ -->
+  <header class="hero-scroll-section" id="hero">
+
+    <!-- Ambient overlays -->
+    <div class="glow" id="glow"></div>
+    <canvas id="bg-canvas"></canvas>
+    <canvas id="canvas"></canvas>
+    <div class="vignette"></div>
+    <!-- Big name behind character -->
+    <div class="hero-bg-name" id="heroBgName">SATYAM</div>
+    <svg class="grain" width="100%" height="100%" aria-hidden="true">
+      <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+      <rect width="100%" height="100%" filter="url(#noise)"/>
+    </svg>
+
+    <!-- Nav -->
+    <nav id="mainNav">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Cinematic hero text -->
+    <div class="hero-overlay" id="heroOverlay">
+
+      <!-- Spacer to push middle down -->
+      <div></div>
+
+      <!-- Middle: Role keywords left -->
+      <div class="hero-middle" id="heroMiddle">
+        <div class="hero-left" id="heroLeft">
+          <div class="hero-role-keyword">Backend</div>
+          <div class="hero-role-keyword">Developer</div>
+          <div class="hero-role-keyword">Security</div>
+          <p class="hero-role-sub">Working at the intersection of backend development and security — building APIs that work, then breaking them before someone else does.</p>
+        </div>
+      </div>
+
+      <!-- Bottom: Social links -->
+      <div class="hero-bottom">
+        <div class="hero-social">
+          <a href="https://github.com/satyam05-cmyk" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            github
+          </a>
+          <a href="mailto:satyam.sb2308@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            email
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </header><!-- /hero-scroll-section -->
+
+
+  <!-- ============================================================
+       CONTENT — Portfolio sections
+       ============================================================ -->
+  <main class="content-wrapper">
+
+    <!-- ======== ABOUT ======== -->
+    <section class="section" id="about">
+      <span class="section-eyebrow fade-up">About</span>
+      <h2 class="section-title fade-up fade-up-delay-1">A bit about<br>who I am<em style="color:var(--brass);font-style:italic;">.</em></h2>
+
+      <div class="about-grid">
+        <div class="about-text fade-up fade-up-delay-2">
+          <p>
+            <strong>BCA student at Sarala Birla University, Ranchi</strong>, specializing in Cybersecurity and Networking, with hands-on experience in Python, FastAPI, Linux, and MongoDB.
+          </p>
+          <p>
+            Focused right now on the overlap between <strong>backend development and security</strong> — building things that work, then trying to break them before someone else does.
+          </p>
+          <p>
+            Learns by building — every concept studied ends up as a GitHub repo, a writeup, or a broken VM that had to get fixed.
+          </p>
+        </div>
+        <div class="about-accent fade-up fade-up-delay-3">
+          <div class="about-accent-box">
+            <p class="about-accent-quote">
+              "Building APIs that are functional first and <strong>resistant to injection</strong> second... by design, not as an afterthought."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-row fade-up fade-up-delay-4">
+        <div class="stat-item">
+          <div class="stat-num">2026</div>
+          <div class="stat-label">BCA Graduation</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Vanilla & Built from Scratch</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">Top</div>
+          <div class="stat-label">Voice Candidate 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ======== PROJECTS ======== -->
+    <section class="section" id="work">
+      <span class="section-eyebrow fade-up">Selected Work</span>
+      <h2 class="section-title fade-up fade-up-delay-1">Projects I've<br>brought to life<em style="color:var(--brass);font-style:italic;">.</em></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card fade-up">
+          <div class="project-img">
+            <img src="assets/Pairly_SS.png" class="parallax-inner-img" alt="Pairly Auth Demo" loading="lazy" width="800" height="600">
+          </div>
+          <div class="project-info parallax-text" data-speed="0.1">
+            <div class="project-num">01</div>
+            <h3 class="project-name">Pairly</h3>
+            <p class="project-desc">A fully functional authentication system built with vanilla HTML, CSS, and JavaScript — designed to demonstrate real-world security controls without relying on frameworks or backend services.</p>
+            <div class="project-tech">
+              <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span><span>Web Crypto API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/satyam05-cmyk" target="_blank" rel="noopener" aria-label="View on GitHub">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card fade-up">
+          <div class="project-img">
+            <img src="assets/project2.jpg" class="parallax-inner-img" alt="GitHub Repositories" loading="lazy" width="800" height="600">
+          </div>
+          <div class="project-info parallax-text" data-speed="0.1">
+            <div class="project-num">02</div>
+            <h3 class="project-name">+ more on GitHub</h3>
+            <p class="project-desc">Every concept studied ends up as a repo. The full list — writeups, broken VMs, backtesting strategies, and CTF solves included — lives on GitHub.</p>
+            <div class="project-tech">
+              <span>Python</span><span>FastAPI</span><span>CTFs</span><span>Nmap</span><span>Burp Suite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/satyam05-cmyk" target="_blank" rel="noopener" aria-label="View on GitHub">
+                github.com/satyam05-cmyk ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ======== SKILLS ======== -->
+    <section class="section" id="skills">
+      <span class="section-eyebrow fade-up">Skills</span>
+      <h2 class="section-title fade-up fade-up-delay-1">My technical<br>toolkit<em style="color:var(--brass);font-style:italic;">.</em></h2>
+
+      <div class="skills-columns">
+        <div class="skill-group fade-up fade-up-delay-1">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">REST API design</span>
+            <span class="skill-pill">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-group fade-up fade-up-delay-2">
+          <h3 class="skill-group-title">Security</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Ethical Hacking</span>
+            <span class="skill-pill">Network scanning (Nmap)</span>
+            <span class="skill-pill">Web vuln testing (Burp Suite)</span>
+            <span class="skill-pill">CTF labs</span>
+          </div>
+        </div>
+        <div class="skill-group fade-up fade-up-delay-3">
+          <h3 class="skill-group-title">Systems & Data</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Git / GitHub</span>
+            <span class="skill-pill">Vanilla JS</span>
+            <span class="skill-pill">pandas</span>
+            <span class="skill-pill">Backtesting strategies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ======== CONTACT ======== -->
+    <section class="section" id="contact">
+      <div class="contact-inner">
+        <span class="section-eyebrow fade-up">Get In Touch</span>
+        <h2 class="contact-headline fade-up fade-up-delay-1">Let's build something<br><em>together.</em></h2>
+        <p class="contact-sub fade-up fade-up-delay-2">Have a project in mind, or just want to say hello? I'd love to hear from you. Drop a message and I'll get back to you soon.</p>
+
+        <div class="contact-links fade-up fade-up-delay-3" style="display:flex; flex-direction:column; gap:24px; align-items:center; font-family:var(--font-display); font-size:clamp(20px, 3vw, 32px); margin-top:40px;">
+          <a href="mailto:satyam.sb2308@gmail.com" style="color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass); padding-bottom:4px; transition:color 0.3s ease;">satyam.sb2308@gmail.com</a>
+          <a href="https://github.com/satyam05-cmyk" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass); padding-bottom:4px; transition:color 0.3s ease;">github.com/satyam05-cmyk</a>
+          <span style="color:var(--muted); font-size:16px; margin-top:20px; font-family:var(--font-ui); text-transform:uppercase; letter-spacing:1px;">Based in Ranchi, Jharkhand, India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Satyam Kumar. Built with vanilla HTML/CSS/JS.</span>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          Back to top
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </footer>
+
+  </main><!-- /content-wrapper -->
+
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
